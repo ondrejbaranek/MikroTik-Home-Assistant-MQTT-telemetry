@@ -24,9 +24,13 @@ put "Functions"
 
     #--------------------------------------------------------------
 local fname "Hassio_Firmware_Entity_Publish"
+put $fname
 local url "https://raw.githubusercontent.com/ondrejbaranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_Entity_Publish.rsc"
+put $url
 local source ([tool/fetch $url output=user as-value ]->"data")
+put $source
 local index [/system/script/find name=$fname]
+put $index
 if ( [len $index] =0) do={
     /system/script/add name=$fname policy=read,test source=$source
 } else={
