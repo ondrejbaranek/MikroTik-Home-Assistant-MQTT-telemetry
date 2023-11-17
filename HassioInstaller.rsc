@@ -23,8 +23,8 @@ foreach fname in=$fnames do={
 put "Functions"
 
     #--------------------------------------------------------------
-local fname "Hassio Firmware Entity Publish"
-local url "https://raw.githubusercontent.com/Xrlls/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio%20Firmware%20Entity%20Publish.rsc"
+local fname "Hassio_Firmware_Entity_Publish"
+local url "https://raw.githubusercontent.com/ondrej.baranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_Entity_Publish.rsc"
 local source ([tool/fetch $url output=user as-value ]->"data")
 local index [/system/script/find name=$fname]
 if ( [len $index] =0) do={
@@ -44,8 +44,8 @@ if ( [len $index] =0) do={
     read,test start-date=2023-09-25 start-time=startup
 }
     #--------------------------------------------------------------
-local fname "Hassio Firmware State Publish"
-local url "https://raw.githubusercontent.com/Xrlls/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio%20Firmware%20State%20Publish.rsc"
+local fname "Hassio_Firmware_State_Publish"
+local url "https://raw.githubusercontent.com/ondrej.baranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_State_Publish.rsc"
 local source ([tool/fetch $url output=user as-value ]->"data")
 local index [/system/script/find name=$fname]
 if ( [len $index] =0) do={
