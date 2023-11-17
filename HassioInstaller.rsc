@@ -24,7 +24,7 @@ put "Functions"
 
     #--------------------------------------------------------------
 local fname "Hassio_Firmware_Entity_Publish"
-local url "https://raw.githubusercontent.com/ondrej.baranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_Entity_Publish.rsc"
+local url "https://raw.githubusercontent.com/ondrejbaranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_Entity_Publish.rsc"
 local source ([tool/fetch $url output=user as-value ]->"data")
 local index [/system/script/find name=$fname]
 if ( [len $index] =0) do={
@@ -45,7 +45,7 @@ if ( [len $index] =0) do={
 }
     #--------------------------------------------------------------
 local fname "Hassio_Firmware_State_Publish"
-local url "https://raw.githubusercontent.com/ondrej.baranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_State_Publish.rsc"
+local url "https://raw.githubusercontent.com/ondrejbaranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_State_Publish.rsc"
 local source ([tool/fetch $url output=user as-value ]->"data")
 local index [/system/script/find name=$fname]
 if ( [len $index] =0) do={
