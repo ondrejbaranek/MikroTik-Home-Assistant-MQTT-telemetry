@@ -23,6 +23,7 @@ foreach fname in=$fnames do={
 put "Functions"
 
     #--------------------------------------------------------------
+{
 local fname "Hassio_Firmware_Entity_Publish"
 put $fname
 local url "https://raw.githubusercontent.com/ondrejbaranek/MikroTik-Home-Assistant-MQTT-telemetry/main/Hassio_Firmware_Entity_Publish.rsc"
@@ -46,6 +47,7 @@ if ( [len $index] =0) do={
     #put [/system/script/get $index name]
     /system scheduler/set $index interval=0s on-event=$fname policy=\
     read,test start-date=2023-09-25 start-time=startup
+}
 }
     #--------------------------------------------------------------
 local fname "Hassio_Firmware_State_Publish"
